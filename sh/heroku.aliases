@@ -1,0 +1,30 @@
+deploy()
+{
+
+	local APP=heroku
+	while [ $# -gt 0 ]; do
+	case $1 in
+	-s)
+	APP=heroku-stg
+	;;
+	esac
+	shift
+	done
+
+	git push $APP HEAD:master
+}
+
+herake()
+{
+	local APP=heroku
+	while [ $# -gt 0 ]; do
+	case $1 in
+	-s)
+	APP=heroku-stg
+	;;
+	esac
+	shift
+	done
+
+
+}
