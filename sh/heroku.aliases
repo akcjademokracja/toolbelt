@@ -1,30 +1,31 @@
 deploy()
 {
 
-	local APP=heroku
+	local REMOTE=heroku
 	while [ $# -gt 0 ]; do
 	case $1 in
 	-s)
-	APP=heroku-stg
+	REMOTE=heroku-stg
 	;;
 	esac
 	shift
 	done
 
-	git push $APP HEAD:master
+	git push $REMOTE HEAD:master
 }
 
-herake()
-{
-	local APP=heroku
-	while [ $# -gt 0 ]; do
-	case $1 in
-	-s)
-	APP=heroku-stg
-	;;
-	esac
-	shift
-	done
-
-
-}
+alias herake="heroku run -a dzialaj rake"
+# herake()
+# {
+# 	local APP=dzialaj
+# 	while [ $# -gt 0 ]; do
+# 	case $1 in
+# 	-s)
+# 	APP=dzialajstg
+# 	shift
+# 	;;
+# 	esac
+# 	done
+# 	heroku run -a $APP rake $@
+# 
+# }

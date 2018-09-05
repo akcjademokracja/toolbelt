@@ -1,2 +1,2 @@
-. .toolbelt/sh/docker.aliases
-. .toolbelt/sh/heroku.aliases
+. ~/.toolbelt/sh/docker.aliases
+. ~/.toolbelt/sh/heroku.aliases
